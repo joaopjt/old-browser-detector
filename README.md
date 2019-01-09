@@ -1,7 +1,7 @@
 # Old Browser Detector
 
 ⚡ The fastest way to detect if user is in a old browser client.
-Proudly optmize of the [OldBrowserDetector](https://github.com/korylprince/OldBrowserDetector).
+Proudly optmized version of the [OldBrowserDetector](https://github.com/korylprince/OldBrowserDetector).
 
 ## Getting Started
 
