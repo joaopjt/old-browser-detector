@@ -63,6 +63,10 @@ export default class OldBrowserDetector {
 
     if (browser['n'] === 'x' || browser['v'] <= (this.options[browser['n']])) {
       this.cb.call(null, browser);
+
+      return true;
     }
+
+    return false;
   }
 }
