@@ -37,7 +37,7 @@ const Detector = new OldBrowserDetector(null, function() {
   alert('Old browser detected.');
 });
 
-Detector.detect();
+Detector.detect(); // Return `true` if old browser is detected.
 ```
 ---
 ### Versions (optional)
@@ -90,14 +90,14 @@ To define versions, the keys for browsers avaiable are:
 
 ### ``.detect()``
 
-> The function detect if the browser is an old one, and call the callback if `true`. Exemple:
+> The function detect if the browser is an old one, and call the callback if `true` is being returned. Exemple:
 
 ```javascript
   const Detector = new OldBrowserDetector(null, function(b) {
     console.log(b); // Object: { n: BrowserType, v: Version, t: DisplayName }
   });
 
-  Detector.detect();
+  Detector.detect(); // Returns true and call callback if old browser detected
 ```
 
 **
