@@ -19,7 +19,7 @@ export default class OldBrowserDetector {
       // detect browser type (n), version (v), display name (t)
       var n,v,t,ua = navigator.userAgent;
 
-      if (/bot|googlebot|slurp|mediapartners|adsbot|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
+      if (/bot|googlebot|slurp|mediapartners|adsbot|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
       else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
       else if (/MSIE.(\d+\.\d+)/i.test(ua)) n="i";
       else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";

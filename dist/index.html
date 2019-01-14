@@ -4,12 +4,28 @@
   </head>
   <body>
     <h1>Old Browser Detector</h1>
+    <br>
+    <ul>
+      <li><strong>Navegador:</strong> <span id="navigator"></span></li>
+      <li><strong>Versão:</strong> <span id="version"></span></li>
+    </ul>
   </body>
   <script src="oldbrowserdetector.min.js"></script>
   <script>
+    var browser = oldBrowserDetector.getBrowser();
     var Detector = new oldBrowserDetector(null, function() {
       alert('Update your browser!');
     });
+
+    var nav = document.querySelector('#navigator');
+    var version = document.querySelector('#version');
+
+    nav.innerHTML = browser.t;
+    version.innerHTML = browser.v;
+
+    if (browser.v <= 0) {
+      alert(navigator.userAgent);
+    }
 
     Detector.detect();
   </script>
