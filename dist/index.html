@@ -8,24 +8,25 @@
     <ul>
       <li><strong>Navegador:</strong> <span id="navigator"></span></li>
       <li><strong>Versão:</strong> <span id="version"></span></li>
+      <li>Mobile: <span id="ismobile"></span></li>
     </ul>
   </body>
   <script src="oldbrowserdetector.min.js"></script>
   <script>
     var browser = oldBrowserDetector.getBrowser();
-    var Detector = new oldBrowserDetector(null, function() {
+    var Detector = new oldBrowserDetector({ s: { d: 8, m: 3 }}, function() {
       alert('Update your browser!');
     });
 
     var nav = document.querySelector('#navigator');
     var version = document.querySelector('#version');
+    var mobile = document.querySelector('#ismobile');
 
     nav.innerHTML = browser.t;
     version.innerHTML = browser.v;
+    mobile.innerHTML = (browser.isMobile) ? 'yes' : 'not';
 
-    if (browser.v <= 0) {
-      alert(navigator.userAgent);
-    }
+    alert(navigator.userAgent);
 
     Detector.detect();
   </script>

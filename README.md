@@ -50,16 +50,29 @@ import OldBrowserDetector from 'old-browser-detector';
 const Detector = new OldBrowserDetector({ i: 11 });
 ```
 
+**You can detect an specified version for mobile users too:**
+
+Passing an object inside the browser object key, with keys *d* and *m* (desktop and mobile respectively),
+the library will detect the browser version according to the device the client is using:
+
+```javascript
+import OldBrowserDetector from 'old-browser-detector';
+
+const Detector = new OldBrowserDetector({ s: { d: 8, m: 3 } });
+```
+
+> When you use that option, the two keys ('d' and 'm') are **required**
+
 To define versions, the keys for browsers avaiable are:
 
-|Object Key      |Default Value |Browser                  |
-|----------------|--------------|-------------------------|
-|`i`             |11            | Internet Explorer       |
-|`f`             |20            | Firefox                 |
-|`c`             |20            | Chrome                  |
-|`o`             |10.6          | Opera                   |
-|`s`             |8             | Safari                  |
-|`n`             |10            | Netscape                |
+|Object Key      |Default (Desktop) |Default (Mobile)|Browser                  |
+|----------------|------------------|----------------|-------------------------|
+|`i`             |11                |11              | Internet Explorer       |
+|`f`             |20                |20              | Firefox                 |
+|`c`             |20                |20              | Chrome                  |
+|`o`             |10.6              |10.6            | Opera                   |
+|`s`             |8                 |3               | Safari                  |
+|`n`             |10                |10              | Netscape                |
 
 ---
 
