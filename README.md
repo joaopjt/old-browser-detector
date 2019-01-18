@@ -96,7 +96,7 @@ To define versions, the keys for browsers avaiable are:
 > The function return an object with the browser Type, Version and Display Name. Exemple:
 
 ```javascript
-  import OldBrowserDetector from 'old-browser-detector;
+  import OldBrowserDetector from 'old-browser-detector';
 
   OldBrowserDetector.getBrowser(); // return an Object { n: BrowserSingleLetterCode, v: Version, t: DisplayName }
 ```
