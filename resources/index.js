@@ -18,7 +18,7 @@ export default class OldBrowserDetector {
   static getBrowser() {
       // detect browser type (n), version (v), display name (t)
       var n,v,t,ua = navigator.userAgent;
-      var isMobile = (/ipad|iphone|android/i.test(ua));
+      var isMobile = (/ipad|ipod|iphone|android/i.test(ua));
 
       if (/bot|googlebot|slurp|mediapartners|adsbot|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
       else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
