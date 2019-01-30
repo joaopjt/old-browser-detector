@@ -1,6 +1,6 @@
 {
   "name": "old-browser-detector",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "The fastest way to test if user uses a old browser client.",
   "keywords": ["outdated", "old", "browser", "old-browser", "detector", "vanilla"],
   "main": "dist/index.min.js",

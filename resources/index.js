@@ -10,8 +10,8 @@ const names={
 const defaultOptions = { i:11, f:20, c:20, o:10.6, s: { d: 8, m: 3 }, n:10 };
 
 export default class OldBrowserDetector {
-  constructor(options = {}, cb) { 
-    this.options = (options) ? Object.assign(defaultOptions, options) : defaultOptions;
+  constructor(options, cb) {
+    this.options = (options) ? Object.assign({}, defaultOptions, options) : defaultOptions;
     this.cb = (cb) ? cb : (b) => console.log(`Old Browser Detected: ${b}`);
   }
 
